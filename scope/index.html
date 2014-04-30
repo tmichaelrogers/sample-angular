@@ -12,9 +12,12 @@
             <div><input type="number" ng-model="qty"></div>
             <div ng-controller="ScopeController">
                 <div><input type="number" ng-model="qty"></div>
+                <div><input type="number" ng-model="cost"></div>
+                <div><b>Total: {{calc()}}</b></div>
             </div>
         </div>
         
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.3/angular.min.js"></script>
+        <script src="scopeController.js"></script>
     </body>
 </html>
