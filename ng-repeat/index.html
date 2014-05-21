@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  
+</head>
+<body>
+
+	<div ng-app="myApp" ng-controller="TaskController">
+	Search:	<input type="text" ng-model="search.title">
+	<table>
+	<tr ng-repeat="task in TaskService.tasks | orderBy: 'status'">
+		<td><input type="checkbox" ng-model="task.status"></td>
+		<td><input type="text" ng-model="task.title"></td>
+	</tr>
+	</table>
+	<input type="text" ng-model="newTitle" ng-enter="addNew()"><input type="button" ng-click="addNew()" value="Add">
+	</div>
+
+    <script	src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    <script src="tasks.js"></script>
+</body>
+</html>

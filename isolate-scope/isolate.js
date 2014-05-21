@@ -8,7 +8,7 @@ myApp.directive("droid", function ()
 {
 	return {
 		restrict: "E",
-		template: "<div>{{name}}</div>",
-		scope: { name:"@" }
+		template: "<div>Droid Name: {{name}}</div><div><input type=\"text\" ng-model=\"name\"></div>",
+		scope: { name:"=" }
 	}
 })
